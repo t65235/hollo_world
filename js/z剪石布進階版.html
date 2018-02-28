@@ -1,0 +1,33 @@
+Field1: <input type="text" id="field1" value= "" >
+
+<button type="button" onclick="
+
+                               
+                               
+p1Choice = document.getElementById('field1').value;
+if(p1Choice.includes('剪刀')){
+   p3Choice='0';
+}else if(p1Choice.includes('石頭')){
+   p3Choice='1';
+}else {
+   p3Choice='2';
+}
+p3Choice = parseInt(p3Choice);
+p2Choice = parseInt(Math.random()*3);
+
+
+console.log(p3Choice);
+console.log(p2Choice);                   
+                               
+if(p1Choice == (p2Choice+1)%3){
+    console.log('贏');
+} else if(p1Choice == p2Choice ){
+    console.log('平手');
+} else {
+    console.log('輸');  // 這是註解
+}                                            
+                               
+">猜拳</button>
+
+<!-- a = "剪刀"
+     console.log(a.replace(/" "/g, ' ')) -->

@@ -1,0 +1,39 @@
+<html>
+    <script>
+        var min=0;
+        var max=100;
+        var answer= parseInt(Math.random()*101);
+        
+        function guess(n){
+           
+            if(n<answer){
+                 min=n;return false
+            } else if (n > answer){
+                 max=n;return false
+            } else {return true}
+             
+        };
+        
+          // 1. 根據猜測狀況更新一下min max
+            // 2. 回傳我一個有沒有猜對的資料(true, false)
+        
+        function guessClicked(){
+            var num = document.getElementById('num').value;
+            num =parseInt(num);
+            if(guess(num) == true){
+                document.getElementById('result').innerHTML ='猜對了!!'
+            } else {
+                document.getElementById('low').innerHTML = min;
+                document.getElementById('hight').innerHTML = max;
+                document.getElementById('result').innerHTML ='猜錯了!!'
+            }
+            
+        }
+    </script>
+
+    
+輸入數字:<input id= 'num' type='text'>
+    <button onclick="guessClicked();">猜</button><br>
+    <span id='low' >0</span>-<span id='hight'>100</span>
+    <span id="result"></span>
+</html>

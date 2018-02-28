@@ -1,0 +1,29 @@
+<script>
+function dog(){}
+dog.prototype.name="unknown"
+dog.prototype.species="dog"
+var dog1 = new dog
+console.log(dog1)
+dog1.name="Red"    
+console.log(dog1)
+dog1.contury="Taipei"
+console.log(dog1)
+dog1.name="BBB"
+console.log(dog1) 
+function cat(n,c){
+    this.name=n;
+    this.country=c
+}
+    cat.prototype.species="cat"
+var cat1 = new cat("yollow","tiii")
+
+console.log(cat1)
+var cat2 = new cat("yollow","tiii")
+cat.prototype.break = function(){ // 給他一個專屬技能
+    console.log(this.name);
+    console.log(this.country);
+    console.log("break!!!!!!!!!");
+}
+cat2.break()
+    
+</script>

@@ -1,0 +1,31 @@
+body,select{
+    color: aquamarine;
+    font-size:55px;
+}
+.a{
+    color: brown;
+    background-color: darkgoldenrod
+}
+#b{
+    color: yellow
+}
+td,th,table{
+    border: 2px solid yellow;
+    border-collapse:collapse;
+}
+.aa:first-letter{
+    color:black
+}
+th:before, th:after{ /*class 也行*/
+    content: "\2665";
+    color: red;
+}
+th:hover{
+    background-color: aqua;
+}
+td:active{
+    font-size: 100px;
+}
+table{
+    width: 90%;
+}

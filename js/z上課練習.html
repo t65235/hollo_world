@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+                      
+          
+            cards="";
+   
+                for(i=0;i<4;i++){
+                    for(j=0;j<13;j++){
+                        singlecard= "color":i,"number":j ;
+                        console.log(singlecard)
+                        cards= cards+ singlecard +"\n"
+                        
+                
+                        console.log(cards)
+                    }
+                }
+            
+            function  myFunction(){
+            var x = document.getElementById("Choice");
+            var option = document.createElement("option");
+          
+            option.text = "1"  ;
+            x.add(option);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <select id="Choice">
+        <option value="0"></option>
+          
+        </select>
+        <button type="button" onclick="myFunction(),transelateCard(cards)">開始遊戲</button>
+    </body>
+    
+</html>
+
+
+
+

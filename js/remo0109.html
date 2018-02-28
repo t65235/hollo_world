@@ -1,0 +1,121 @@
+<script>
+chart=[]
+for(i=0;i<9;i++){
+    row=[];
+    for(j=0;j<9;j++){
+        row.push((i+1)*(j+1))
+    }
+    chart.push(row)
+}    
+console.log(chart);
+console.log(chart[3-1]);
+console.log(chart[3-1][4-1]);
+    
+    
+</script>
+
+<script>
+    p1 = {"name":"elwing","height":175,"weight":75}
+    p1['name']
+    p1.name
+    p1['name']="amy"
+    p1.name ="amy"
+    p1['gender']='m'
+    p1.hight=p1.height+5
+    p1.name= null
+    
+    
+</script>
+
+
+<script>
+cards=[];
+    for(i=0;i<4;i++){
+        for(j=0;j<13;j++){
+            singlecard={"color":i,"number":(j+1)};
+            cards.push(singlecard);
+        }
+       
+    }
+    console.log(cards);
+    
+c = cards[0];
+color=c.color;
+number=c.number;
+colorRepr=["\u2663","\u2666","\u2665","\u2660"];
+numberRepr=["A","1","2","3","4","5","6","7","8","9","10","J","Q","K"];
+console.log(colorRepr[color]+numberRepr[number]);
+</script>
+
+
+<script>
+
+function add(num1,num2){
+    console.log(num1);
+    console.log(num2);
+    num3=num1+num2;
+    return(num3);
+};
+</script>
+
+
+<script>
+
+function add(num1,num2){
+    console.log(num1);
+    console.log(num2);
+    var num3=num1+num2;
+    return(num3);
+}; // var 定義正常名字的範圍
+
+
+var num3 = 5 ;  // 外面的名字範圍 依照圈圈內 下去使用
+
+
+
+</script>
+
+
+<script>
+
+function add(...numbers){ // ...參數(不定陣列)將參數轉為陣列
+    var result = 0;
+    for( var i =0;i<numbers.length;i++)
+    result = result + numbers[i]
+    return result;
+};
+
+
+
+</script>
+
+<script>
+
+function muladd(rate,...numbers){ // ...參數(不定陣列)將參數轉為陣列
+    var result = 0;
+    for( var i =0;i<numbers.length;i++)
+    result = result + numbers[i]
+    return rate * result;
+};
+</script>
+
+<script>
+function transelateCard(card){
+    color=card.color;
+    number=card.number;
+    colorRepr=["\u2663","\u2666","\u2665","\u2660"];
+    numberRepr=["A","1","2","3","4","5","6","7","8","9","10","J","Q","K"];
+    return colorRepr[color]+numberRepr[number]
+}
+cards=[];
+    for(i=0;i<4;i++){
+        for(j=0;j<13;j++){
+            singlecard={"color":i,"number":(j+1)};
+            cards.push(singlecard);
+        }
+       
+    }
+    console.log(cards);
+    console.log(transelateCard(cards));
+
+</script>
