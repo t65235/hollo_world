@@ -52,7 +52,7 @@ public class Stack {
 	private static final long serialVersionUID = 1L;
 	StackEmptyException(){
 		System.out.println("¤p¦Ì");
-	}
+	} 
 	
  }
  class StackFullException extends Exception{

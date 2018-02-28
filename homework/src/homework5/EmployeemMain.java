@@ -1,7 +1,7 @@
 package homework5;
 
 public class EmployeemMain {
-
+ 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	員工 e01 =new 一般職員 ("王大明","男","100-1-1","0912345678","台灣",20000);
