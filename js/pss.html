@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on branch 'master' of https://github.com/t65235/hollo_world.git
 <html>
     <head>
         <title>剪刀石頭布</title>
@@ -72,4 +73,80 @@
 
 
 
+=======
+<html>
+    <head>
+        <title>剪刀石頭布</title>
+        <link rel="stylesheet" href="pss.css">
+        <script>
+            var wintime =0 ;
+            var losetime =0;
+            var eventime =0;
+            var ratio =0 ;
+            
+            function play(){
+                var P1Choice=document.getElementById('Choice').value;
+                var P1Choice=parseInt(P1Choice);
+                var P2Choice=parseInt(Math.random()*3);
+                console.log(P1Choice);
+                console.log(P2Choice);
+                
+            if(P1Choice == (P2Choice+1)%3){
+                wintime = wintime+1;
+                document.getElementById("win").innerHTML= wintime ;
+                document.getElementById("result").innerHTML= 'ㄍㄢˋ!';
+                console.log("你贏了");
+            }else if(P1Choice = P2Choice){
+                eventime = eventime+1;
+                document.getElementById("even").innerHTML=eventime; 
+                document.getElementById("result").innerHTML ='算你走運!!';
+                console.log("平手")
+            }else {losetime = losetime+1;
+                document.getElementById("lose").innerHTML=losetime; 
+                document.getElementById("result").innerHTML='小嫩逼 !!' ;
+                console.log("你輸了");}
+                
+            ratio = parseInt(wintime/(wintime+losetime+eventime)*100)
+            document.getElementById("ratio").innerHTML= ratio+"%"
+            }
+            function goback(){
+                window.history.go(-1);
+            }
+        </script>    
+    </head>
+    <body>
+        <div>
+        <select id = "Choice">
+            <option value="0">剪刀</option>
+            <option value="1">石頭</option>
+            <option value="2">布</option>
+        </select>
+        </div><br>
+        <button type="button" onclick="play()">猜拳</button><br><br>
+        <span id= "result">來拚個你死我活吧!!!</span> <br><br><br><br><br>
+            <table>
+            <thead>
+                <tr>
+                    <th id = a>贏的次數</th>
+                    <th>輸的次數</th>
+                    <th>平手的次數</th>
+                    <th>贏的比例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="win">0</td>
+                    <td id="lose">0</td>
+                    <td id="even">0</td>
+                    <td id="ratio">0%</td>
+                </tr>
+            </tbody>
+            </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+
+            <button onclick="goback() ">返回上一頁</button>
+
+
+
+>>>>>>> 90db7b0  這是JS的更新檔
 </html>

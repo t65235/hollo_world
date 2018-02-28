@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on branch 'master' of https://github.com/t65235/hollo_world.git
 <script>
 scroe = 59 ;
 if(scroe >= 60){
@@ -162,3 +163,169 @@ result=0;
  }
     console.log(result); 
 </script>
+=======
+<script>
+scroe = 59 ;
+if(scroe >= 60){
+    console.log("一.一");
+} else {
+    console.log("0.0");
+}    
+
+scroe = 95 ;
+if(scroe >= 90){
+    console.log("rank a");
+} else if(scroe >= 80){
+    console.log("rank b");
+} else if(scroe >= 70){
+    console.log("rank c");
+} else if(scroe >= 60){
+    console.log("rank d");
+} else {
+    console.log("0.0");
+} 
+    
+scroe = 85 ;
+if(scroe >= 80){
+    if(scroe >= 90){
+        console.log("rank a");
+    } else {
+            console.log("rank b");
+    }
+} else if(scroe >= 70){
+    console.log("rank c");
+} else if(scroe >= 60){
+    console.log("rank d");
+} else {
+    console.log("0.0");
+} 
+</script>
+
+// 剪刀石頭布
+
+<select id="Choice">
+  <option value="0">剪刀</option>
+  <option value="1">石頭</option>
+  <option value="2">布</option>
+  </select>
+<button type="button" onclick="
+
+p1Choice = document.getElementById('Choice').value;
+p1Choice = parseInt(p1Choice)
+p2Choice = parseInt(Math.random()*3)
+
+console.log(p1Choice)
+console.log(p2Choice)                    
+                               
+if(p1Choice == (p2Choice+1)%3){
+    console.log('贏');
+} else if(p1Choice == p2Choice ){
+    console.log('平手');
+} else {
+    console.log('輸');  // 這是註解
+}                                                             
+">猜拳</button>
+
+// 欄位
+
+
+
+<html>
+<body>
+Field1: <input type="text" id="field1" value= 剪刀=1 >
+<br />
+Field2: <input type="text" id="field2">
+<br /><br />
+点击下面的按钮，把 Field1 的内容拷贝到 Field2 中：
+<br />
+<button onclick="document.getElementById('field2').value=
+document.getElementById('field1').value">Copy Text</button>
+
+</body>
+</html>
+
+// FOR
+
+<script>
+for(i=0;i<10;i++){
+    console.log(i+'我好帥' )
+}
+</script>
+
+// 進階 (99乘法表+換行+顯示在一列)
+
+<script>
+    aa= ""
+for(i=0;i<10;i++){    
+    result="";
+    for(j=0;j<10;j++){
+        mul= (1+i) * (j+1);
+        result = result + mul + " "
+    }
+    aa= aa +result+"\n"; 
+}
+    console.log(aa)
+</script>
+// FOR 數字的加總
+
+<script>
+     result=0;
+     for(i=0 ; i<100;i++){ 
+        mul=1+i;
+        result= result+ mul;
+    }
+    console.log(result)
+</script>   
+
+// while
+
+<script>
+result=0;
+    i=0;
+     while(i<100){ 
+        mul=1+i;
+        result= result+ mul;
+        i++;
+    }
+    console.log(result)
+</script>
+// 利用WHILE尋找未知次數
+<script>
+result=0;
+    i=0;
+
+     while(result<5000){ 
+        
+        result= result+(1+i);
+        i++;
+    }
+    console.log(i)
+</script>
+// 回家作業
+
+<script>
+
+    names=["Carol","Amy","Bob"];
+    names.push("Emily");
+    console.log(names);
+    
+    b = names.pop();
+    console.log(names);
+    console.log(b);
+    
+    names.push("Ann");
+    
+    names.reverse();  // 逆排序
+    console.log(names);
+    
+    names.sort();    // 正排序
+    console.log(names);
+    
+    result="";
+ for(i=0;i<names.length;i++){
+     ("- "+ names[i])
+    result= result+("- "+ names[i])+"\n"
+ }
+    console.log(result); 
+</script>
+>>>>>>> 90db7b0  這是JS的更新檔

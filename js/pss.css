@@ -1,3 +1,4 @@
+<<<<<<< Upstream, based on branch 'master' of https://github.com/t65235/hollo_world.git
 td,th,table{
     border: 3px solid yellow ;
     border-collapse: collapse;
@@ -12,4 +13,20 @@ table{
 }
 th:hover , td:hover{
     color: chocolate
+=======
+td,th,table{
+    border: 3px solid yellow ;
+    border-collapse: collapse;
+}
+#a:after{
+    content: "\2665";
+    color: red;
+}
+table{
+    background-color:cyan;
+    font-size: 15px;
+}
+th:hover , td:hover{
+    color: chocolate
+>>>>>>> 90db7b0  這是JS的更新檔
 }
