@@ -16,7 +16,10 @@ public class MyCalendar {
 			int a = Integer.parseInt(str);
 			dataaaaa b =new dataaaaa(year,a);
 			b.data();
-			}else {dataaaaa b =new dataaaaa(year);}
+			}else {
+				dataaaaa b =new dataaaaa(year);
+				b.abc();
+			}
 			mouth.close();
 			scanner.close();
 				
@@ -25,27 +28,21 @@ public class MyCalendar {
 
 static class dataaaaa{
 	int year ,mouth;
-	Calendar today = new GregorianCalendar(year,mouth,1);
-	int day = today. getActualMaximum(Calendar.DATE);//取最大日
-	int day_of_week=today.get(Calendar.DAY_OF_WEEK);//取星期
+	
 	
 	dataaaaa(int year){
 		this.year=year;
-		for(int i=0;i<12;i++) {
-			Calendar today = new GregorianCalendar(year,mouth,1);
-			day = today. getActualMaximum(Calendar.DATE);//取最大日
-			day_of_week=today.get(Calendar.DAY_OF_WEEK);//取星期
-			System.out.println(year+"年"+(i+1)+"月");
-			data();
-			mouth++;
-			}
-	}
+		}
 	dataaaaa(int year,int mouth){
 		this.year=year;
 		this.mouth=mouth-1;
-		System.out.println(year+"年"+mouth+"月");
+		
 		}
 	void data() {
+		Calendar today = new GregorianCalendar(year,mouth,1);
+		int day = today. getActualMaximum(Calendar.DATE);//取最大日
+		int day_of_week=today.get(Calendar.DAY_OF_WEEK);//取星期
+		System.out.println(year+"年"+(mouth+1)+"月");
 		System.out.println("日\t一\t二\t三\t四\t五\t六");
 		System.out.println("-------------------------------------------------");
 		for(int i =0;i<day_of_week-1 ; i++) {
@@ -60,6 +57,12 @@ static class dataaaaa{
 		day_of_week += 1;
 		}
 		System.out.println("");
+	}
+	void abc(){
+		for(int i=0;i<12;i++) {
+			data();
+			mouth++;
+			}
 	}
 }}
 /*輸入一個正整數，列印出那一年的年曆。
