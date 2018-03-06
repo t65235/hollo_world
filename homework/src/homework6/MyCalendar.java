@@ -53,7 +53,7 @@ static class dataaaaa{
 				System.out.println("");
 				day_of_week = 1;
 				}
-		System.out.print((j+1)+"\t" );
+		System.out.print(((j+1)<10)?" "+(j+1)+"\t":(j+1)+"\t" );
 		day_of_week += 1;
 		}
 		System.out.println("");
