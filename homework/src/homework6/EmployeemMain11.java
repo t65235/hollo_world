@@ -25,10 +25,7 @@ public class EmployeemMain11 {
 			in.close();
 	}catch(IOException e) {e.printStackTrace();
 		
-	}
-
-
-}}
+	}}}
 abstract class 員工{
 	private String 姓名;
 	private String 性別;
